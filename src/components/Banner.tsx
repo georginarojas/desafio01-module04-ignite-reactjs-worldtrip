@@ -6,7 +6,6 @@ export function Banner() {
     base: false,
     lg: true,
   });
-  console.log(isWideVersion);
 
   return (
     <Flex
