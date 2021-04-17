@@ -10,15 +10,14 @@ export function NavBar() {
   });
   return (
     <Grid
-      flex="1"
       gap={["15px", "47px"]}
       templateColumns={["repeat(2, 1fr)", "repeat(5, 1fr)"]}
-      align="flex-end"
+      // align="center"
       paddingX={["40px", "140px"]}
       paddingY={["36px", "80px"]}
       autoRows={["minmax(20px, 24px)", "minmax(150px, 158px)"]}
     >
-      <GridItem colSpan={1} h="10px">
+      <GridItem colSpan={1} >
         <NavLink
           imgSrc="/images/cocktail.png"
           altImg="Cocktail image"
@@ -29,7 +28,7 @@ export function NavBar() {
         />
       </GridItem>
 
-      <GridItem colSpan={1} h="10px">
+      <GridItem colSpan={1}>
         <NavLink
           imgSrc="/images/surf.png"
           altImg="surf image"
@@ -40,7 +39,7 @@ export function NavBar() {
         />
       </GridItem>
 
-      <GridItem colSpan={1} h="10px" blockSize={["24px", "145px"]}>
+      <GridItem colSpan={1} >
         <NavLink
           imgSrc="/images/building.png"
           altImg="building image"
@@ -51,7 +50,7 @@ export function NavBar() {
         />
       </GridItem>
 
-      <GridItem colSpan={1} h="10px" blockSize={["24px", "145px"]}>
+      <GridItem colSpan={1} >
         <NavLink
           imgSrc="/images/museum.png"
           altImg="museum image"
