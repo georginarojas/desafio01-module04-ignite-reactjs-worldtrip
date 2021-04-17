@@ -1,0 +1,25 @@
+.swiper-pagination-bullet-active {
+  background: #ffba08 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffba08 !important;
+  width: calc(var(--swiper-navigation-size) / 44 * 70) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 30px !important;
+}
+
+@media (max-width: 375px) {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 20px !important;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: calc(var(--swiper-navigation-size) / 44 * 35) !important;
+  }
+}
