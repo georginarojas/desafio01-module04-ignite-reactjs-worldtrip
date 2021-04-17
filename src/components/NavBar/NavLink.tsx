@@ -4,8 +4,9 @@ import {
   Img,
   Text,
   Box,
+  Icon,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { ElementType } from "react";
 import { ActiveLink } from "../ActiveLink";
 
 interface NavLinkProps extends ChakraLinkProps {
@@ -13,6 +14,8 @@ interface NavLinkProps extends ChakraLinkProps {
   altImg: string;
   children: string;
   href: string;
+  isWideVersion: boolean;
+  icon: ElementType;
 }
 
 export function NavLink({
@@ -20,25 +23,37 @@ export function NavLink({
   altImg,
   children,
   href,
+  isWideVersion,
+  icon,
   ...rest
 }: NavLinkProps) {
   return (
     <ActiveLink href={href} passHref>
-      <ChakraLink {...rest}>
+      <ChakraLink align="center" {...rest}>
         <Box
-          width={["130px", "158px"]}
+          width={["120px", "158px"]}
           height={["24px", "145px"]}
-          display="block"
+          display={isWideVersion ? "block" : "inline"}
           align="center"
         >
-          <Img src={imgSrc} alt={altImg} />
+          {isWideVersion ? (
+            <Img src={imgSrc} alt={altImg} />
+          ) : (
+            <Icon
+              as={icon}
+              boxSize={3}
+              color="orange.300"
+              display={!isWideVersion && "inline-block"}
+              marginRight="8px"
+            />
+          )}
           <Text
             fontSize={["18px", "24px"]}
             fontWeight={["500", "600"]}
             lineHeight={["27px", "36px"]}
-            align="center"
             color="dark.text"
-            marginTop={["27px", "24px"]}
+            marginTop={["0px", "24px"]}
+            display={!isWideVersion && "inline-block"}
           >
             {children}
           </Text>
