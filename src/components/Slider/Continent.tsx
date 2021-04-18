@@ -34,7 +34,9 @@ export function Continent({
             fontSize={["24px", "48px"]}
             fontWeight="700"
             lineHeight={["36px", "72px"]}
-            color="ligth.text"
+            color="light.text"
+            _hover={{ color: "orange.300"}}
+            cursor="pointer"
           >
             {name}
           </Text>
@@ -42,7 +44,7 @@ export function Continent({
             fontSize={["14px", "24px"]}
             fontWeight="700"
             lineHeight={["21px", "36px"]}
-            color="ligth.info"
+            color="light.info"
             marginTop={["12px", "16px"]}
           >
             {description}
