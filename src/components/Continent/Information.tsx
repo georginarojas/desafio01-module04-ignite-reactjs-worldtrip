@@ -5,14 +5,27 @@ import {
   Text,
   Flex,
   useBreakpointValue,
+  HStack,
+  Tooltip,
+  Button,
 } from "@chakra-ui/react";
+import { FiInfo } from "react-icons/fi";
 
-export function Information() {
+interface InformationProps {
+  isViewCities: boolean;
+  setViewCities: () => void;
+}
+
+export function Information({ setViewCities, isViewCities }: InformationProps) {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
   });
-  console.log(isWideVersion);
+
+  function handleClick() {
+    setViewCities();
+  }
+
   return (
     <Grid
       templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
@@ -27,7 +40,7 @@ export function Information() {
         <Box
           as="p"
           width={["325px", "550px"]}
-          height={["146px", "211px"]}
+          height={["146px", "240px"]}
           lineHeight={["21px", "36px"]}
           fontSize={["14px", "24px"]}
           textAlign="justify"
@@ -44,8 +57,6 @@ export function Information() {
         colSpan={1}
         alignItems="center"
         display="flex"
-        // flexDirection="row"
-        // flexWrap="wrap"
         justifyContent="center"
         justifySelf="start"
       >
@@ -57,7 +68,6 @@ export function Information() {
         >
           <Box
             width={["60px", "98px"]}
-            // height={["59px", "98x"]}
             lineHeight={["27px", "36px"]}
             fontSize={["18px", "24px"]}
             fontWeight="600"
@@ -77,7 +87,6 @@ export function Information() {
 
           <Box
             width={["70px", "98px"]}
-            // height={["59px", "98x"]}
             lineHeight={["27px", "36px"]}
             fontSize={["18px", "24px"]}
             fontWeight="600"
@@ -96,7 +105,7 @@ export function Information() {
           </Box>
 
           <Box
-            width={["120px", "165px"]}
+            width={["120px", "185px"]}
             // height={["59px", "98x"]}
             lineHeight={["27px", "36px"]}
             fontSize={["18px", "24px"]}
@@ -112,7 +121,28 @@ export function Information() {
             >
               27
             </Text>
-            <Text fontWeight={!isWideVersion && "400"}>cidades +100</Text>
+            <HStack display="flex">
+              <Text fontWeight={!isWideVersion && "400"}>cidades +100</Text>
+              {!isViewCities && (
+                <Tooltip
+                  hasArrow
+                  label="Olha alguma cidades!"
+                  aria-label="A tooltip"
+                >
+                  <Button
+                    size="15px"
+                    margin="0"
+                    padding="0"
+                    bg="light.white"
+                    _hover={{ bg: "light.white" }}
+                    opacity="50%"
+                    onClick={() => handleClick()}
+                  >
+                    <FiInfo size={15} />
+                  </Button>
+                </Tooltip>
+              )}
+            </HStack>
           </Box>
         </Flex>
       </GridItem>

@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Flex } from "@chakra-ui/react";
 import { Header } from "../../components/Header";
 import { Banner } from "../../components/Continent/Banner";
 import { Information } from "../../components/Continent/Information";
+import { Cities } from "../../components/Continent/Cities";
 
 export default function Continent() {
+  const [isViewCities, setIsViewCities] = useState(false);
+
+  function ViewCities() {
+    setIsViewCities(true);
+  }
+
+  console.log("Isviewcities", isViewCities);
+
   return (
     <Flex
       direction="column"
@@ -15,7 +24,8 @@ export default function Continent() {
     >
       <Header href="/" />
       <Banner />
-      <Information />
+      <Information setViewCities={ViewCities} isViewCities={isViewCities}/>
+      {isViewCities && <Cities />}
     </Flex>
   );
 }
