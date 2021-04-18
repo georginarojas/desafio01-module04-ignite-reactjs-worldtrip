@@ -10,7 +10,7 @@ export const theme = extendTheme({
       text: "#47585B",
       info: "#999999",
     },
-    ligth: {
+    light: {
       white: "#ffffff",
       text: "#F5F8FA",
       info: "#DADADA",
@@ -23,7 +23,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "ligth.white",
+        bg: "light.white",
         color: "dark.text",
       },
     },

@@ -35,7 +35,7 @@ export function Banner() {
             fontSize={["20px", "36px"]}
             fontWeight="500"
             lineHeight={["30px", "54px"]}
-            color="ligth.text"
+            color="light.text"
           >
             5 Continentes, <br />
             infinitas possibilidades.
@@ -47,7 +47,7 @@ export function Banner() {
             lineHeight={["21px", "30px"]}
             marginLeft={["16px", "140px"]}
             marginTop={["8xp", "20px"]}
-            color="ligth.info"
+            color="light.info"
           >
             Chegou a hora de tirar do papel a viagem que você sempre sonhou
           </Text>
