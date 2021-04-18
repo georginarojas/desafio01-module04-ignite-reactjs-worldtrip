@@ -13,13 +13,14 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 export function Slider() {
   return (
     <Flex
-      w={["375px", "1160px"]}
+      w={["375px","1200px"]}
       h={["250px", "450"]}
       maxWidth={1440}
       bg="dark.black"
       margin="0 auto"
       marginTop={["20px", "52px"]}
       marginBottom={["24px", "40px"]}
+      // marginX={["0px", "85px"]}
       boxShadow=" 0px 4px 4px rgba(0, 0, 0, 0.25)"
     >
       <Swiper

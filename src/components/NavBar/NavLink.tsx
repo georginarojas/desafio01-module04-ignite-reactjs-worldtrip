@@ -31,7 +31,7 @@ export function NavLink({
     <ActiveLink href={href} passHref>
       <ChakraLink align="center" {...rest}>
         <Box
-          width={["120px", "158px"]}
+          width={["120px", "160px"]}
           height={["24px", "145px"]}
           display={isWideVersion ? "block" : "inline"}
           align="center"
@@ -48,7 +48,7 @@ export function NavLink({
             />
           )}
           <Text
-            fontSize={["18px", "24px"]}
+            fontSize={["18px", "22px", "24px"]}
             fontWeight={["500", "600"]}
             lineHeight={["27px", "36px"]}
             color="dark.text"

@@ -27,7 +27,7 @@ export function Header({ href }: HeaderProps) {
       width="100%"
       maxWidth={1480}
       height="28"
-      marginX="auto"
+      marginX="0 auto"
       paddingX={["5", "6", "32"]}
       paddingY={["4", "7"]}
       align="center"

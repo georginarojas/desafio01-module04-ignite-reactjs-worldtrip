@@ -8,7 +8,7 @@ import { Slider } from "../components/Slider";
 
 export default function Home() {
   return (
-    <Flex direction="column" height="100vh">
+    <Flex direction="column" height="100vh"  width={["375px", "1262px"]} maxWidth={1480}>
       <Header href="/" />
       <Banner />
       <NavBar />
@@ -18,12 +18,13 @@ export default function Home() {
         justify="center"
         margin="0 auto"
       >
-        <Divider borderColor="dark.text" borderWidth="2px" />
+        <Divider borderColor="dark.text" borderWidth="2px"/>
       </Box>
 
       <Text
-        width={["297px", "839px"]}
+        // width={["297px", "1200px"]}
         height={["54px", "101px"]}
+        maxWidth={1440}
         fontSize={["20px", "36px"]}
         fontWeight="500"
         lineHeight={["30px", "54px"]}

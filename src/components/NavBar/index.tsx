@@ -10,12 +10,13 @@ export function NavBar() {
   });
   return (
     <Grid
-      gap={["15px", "47px"]}
+      gap={["15px", "20px", "47px"]}
       templateColumns={["repeat(2, 1fr)", "repeat(5, 1fr)"]}
-      // align="center"
+      align="center"
       paddingX={["40px", "140px"]}
       paddingY={["36px", "80px"]}
       autoRows={["minmax(20px, 24px)", "minmax(150px, 158px)"]}
+      autoColumns="auto"
     >
       <GridItem colSpan={1} >
         <NavLink

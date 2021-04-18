@@ -24,6 +24,7 @@ export function Continent({
           alt={altText}
           height={["250px", "450"]}
           width={["375px", "1200px"]}
+          maxWidth={1440}
           objectFit="cover"
           opacity="60%"
         />
