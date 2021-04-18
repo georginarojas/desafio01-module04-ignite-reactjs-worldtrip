@@ -31,7 +31,7 @@ export function Slider() {
       >
         <SwiperSlide>
           <Continent
-            href="#"
+            href="/continent/europe"
             srcImage="/continents/europe.jpg"
             altText="europe"
             name="Europa"
@@ -41,7 +41,7 @@ export function Slider() {
 
         <SwiperSlide>
           <Continent
-            href="#"
+            href="/continent/oceania"
             srcImage="/continents/oceania.jpg"
             altText="oceania"
             name="Oceania"
@@ -51,7 +51,7 @@ export function Slider() {
 
         <SwiperSlide>
           <Continent
-            href="#"
+            href="/continent/northAmerica"
             srcImage="/continents/northAmerica.jpg"
             altText="north america"
             name="América do Norte"
@@ -61,7 +61,7 @@ export function Slider() {
 
         <SwiperSlide>
           <Continent
-            href="#"
+            href="/continent/southAmerica"
             srcImage="/continents/southAmerica.jpg"
             altText="south america"
             name="América do Sul"
@@ -71,7 +71,7 @@ export function Slider() {
 
         <SwiperSlide>
           <Continent
-            href="#"
+            href="/continent/asia"
             srcImage="/continents/asia.jpg"
             altText="asia"
             name="Ásia"
@@ -81,7 +81,7 @@ export function Slider() {
 
         <SwiperSlide>
           <Continent
-            href="#"
+            href="/continent/africa"
             srcImage="/continents/africa.jpg"
             altText="africa"
             name="África"
