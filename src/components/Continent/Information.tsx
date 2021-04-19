@@ -14,9 +14,20 @@ import { FiInfo } from "react-icons/fi";
 interface InformationProps {
   isViewCities: boolean;
   setViewCities: () => void;
+  info: string;
+  countries: number;
+  languages: number;
+  cities: number;
 }
 
-export function Information({ setViewCities, isViewCities }: InformationProps) {
+export function Information({
+  setViewCities,
+  isViewCities,
+  info,
+  countries,
+  languages,
+  cities,
+}: InformationProps) {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
@@ -46,10 +57,7 @@ export function Information({ setViewCities, isViewCities }: InformationProps) {
           textAlign="justify"
           color="dark.text"
         >
-          A Europa é, por convenção, um dos seis continentes do mundo.
-          Compreendendo a península ocidental da Eurásia, a Europa geralmente
-          divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-          rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+          {info}
         </Box>
       </GridItem>
 
@@ -80,7 +88,7 @@ export function Information({ setViewCities, isViewCities }: InformationProps) {
               color="orange.300"
               lineHeight={["36px", "72px"]}
             >
-              50
+              {countries}
             </Text>
             <Text fontWeight={!isWideVersion && "400"}>países</Text>
           </Box>
@@ -99,7 +107,7 @@ export function Information({ setViewCities, isViewCities }: InformationProps) {
               color="orange.300"
               lineHeight={["36px", "72px"]}
             >
-              60
+              {languages}
             </Text>
             <Text fontWeight={!isWideVersion && "400"}>línguas</Text>
           </Box>
@@ -119,7 +127,7 @@ export function Information({ setViewCities, isViewCities }: InformationProps) {
               color="orange.300"
               lineHeight={["36px", "72px"]}
             >
-              27
+              {cities}
             </Text>
             <HStack display="flex">
               <Text fontWeight={!isWideVersion && "400"}>cidades +100</Text>

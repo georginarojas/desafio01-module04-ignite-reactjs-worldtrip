@@ -1,21 +1,26 @@
 import { Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 
-export function Banner() {
+interface BannerProps {
+  name: string;
+  image: string;
+}
+
+export function Banner({ name, image }: BannerProps) {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
   });
+
   return (
     <Flex
       width="100%"
       height={["150px", "500px"]}
-      bgImage="url(/continents/europe.jpg)"
+      bgImage={`url(${image})`}
       bgSize="cover"
       bgRepeat="no-repeat"
-      // marginBottom={["24px", "80px"]}
-      align={isWideVersion ? "flex-end": "center"}
-      justify={isWideVersion ? "bottom": "center"}
-      >
+      align={isWideVersion ? "flex-end" : "center"}
+      justify={isWideVersion ? "bottom" : "center"}
+    >
       <Text
         fontSize={["28px", "48px"]}
         fontWeight="600"
@@ -24,7 +29,7 @@ export function Banner() {
         marginLeft={isWideVersion && "140px"}
         marginBottom={isWideVersion && "59px"}
       >
-        Europa
+        {name}
       </Text>
     </Flex>
   );

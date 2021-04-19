@@ -1,11 +1,17 @@
 import { Box, Circle, HStack, Img, Text } from "@chakra-ui/react";
-import React from "react";
 
-export function CityBox() {
+interface CityBoxProps {
+  city: string;
+  country: string;
+  flag: string;
+  image: string;
+}
+
+export function CityBox({ city, country, flag, image }: CityBoxProps) {
   return (
     <Box width="225px" height="279px" borderRadius="4px">
       <Img
-        src="/continents/europe.jpg"
+        src={image}
         alt="europe city"
         height="173px"
         width="225px"
@@ -30,7 +36,7 @@ export function CityBox() {
             color="dark.text"
             fontFamily="Barlow"
           >
-            Londres
+            {city}
           </Text>
           <Text
             fontSize="16px"
@@ -40,12 +46,12 @@ export function CityBox() {
             fontFamily="Barlow"
             marginTop="10px"
           >
-            Reino Unido
+            {country}
           </Text>
         </Box>
         <Circle size="30px" marginLeft="auto">
           <Img
-            src="/images/building.png"
+            src={flag}
             alt="city flag"
             height="30px"
             width="30px"

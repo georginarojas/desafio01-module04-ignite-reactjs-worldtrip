@@ -2,6 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import { CitiesGrid } from "./CitiesGrid";
 
 export function Cities() {
+    
   return (
     <Flex
     display="block"
