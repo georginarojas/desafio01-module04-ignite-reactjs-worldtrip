@@ -61,7 +61,9 @@ export default function Continent({ continentName }: ContinentProps) {
           cities={continentCurrent.cities}
         />
       )}
-      {isViewCities && <Cities />}
+      {/* {isViewCities &&  */}
+      <Cities />
+      {/* } */}
     </Flex>
   );
 }

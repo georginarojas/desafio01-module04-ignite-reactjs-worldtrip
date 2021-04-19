@@ -114,7 +114,6 @@ export function Information({
 
           <Box
             width={["120px", "185px"]}
-            // height={["59px", "98x"]}
             lineHeight={["27px", "36px"]}
             fontSize={["18px", "24px"]}
             fontWeight="600"
@@ -131,7 +130,7 @@ export function Information({
             </Text>
             <HStack display="flex">
               <Text fontWeight={!isWideVersion && "400"}>cidades +100</Text>
-              {!isViewCities && (
+              {/* {!isViewCities && ( */}
                 <Tooltip
                   hasArrow
                   label="Olha alguma cidades!"
@@ -144,12 +143,12 @@ export function Information({
                     bg="light.white"
                     _hover={{ bg: "light.white" }}
                     opacity="50%"
-                    onClick={() => handleClick()}
+                    // onClick={() => handleClick()}
                   >
                     <FiInfo size={15} />
                   </Button>
                 </Tooltip>
-              )}
+               {/* )} */}
             </HStack>
           </Box>
         </Flex>
