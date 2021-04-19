@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Flex, Box, Text, Img } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 import { Continent } from "./Continent";
 
@@ -20,7 +19,6 @@ export function Slider() {
       margin="0 auto"
       marginTop={["20px", "52px"]}
       marginBottom={["24px", "40px"]}
-      // marginX={["0px", "85px"]}
       boxShadow=" 0px 4px 4px rgba(0, 0, 0, 0.25)"
     >
       <Swiper
